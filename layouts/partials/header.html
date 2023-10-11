@@ -42,8 +42,11 @@
       </span>
       <div
         class="language-dropdown absolute top-full mt-2 left-0 flex-col gap-2 bg-gray-100 dark:bg-gray-900 dark:text-white z-10 hidden">
+        {{ $currURL := urls.AbsURL .Permalink }}
+        {{ $langPrefix := urls.AbsLangURL "/" }}
+        {{ $trimmedURL := strings.TrimPrefix $langPrefix $currURL}}
         {{ range .Site.Languages }}
-        <a class="px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700" href="/{{ .Lang }}" lang="{{ .Lang }}">{{ default .Lang .LanguageName }}</a>
+        <a class="px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700" href="/{{ .Lang }}/{{ $trimmedURL }}" lang="{{ .Lang }}">{{ default .Lang .LanguageName }}</a>
         {{ end }}
       </div>
     </li>
