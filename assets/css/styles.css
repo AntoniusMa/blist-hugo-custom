@@ -9,6 +9,12 @@
 /* Tailwind's utility classes - generated based on config file */
 @import "node_modules/tailwindcss/utilities";
 
+:root {
+    --border-highlight-color: rgba(158, 124, 71);
+    --border-base-color: rgba(158, 124, 71, 0.5);
+    --border-base-width: 2px;
+}
+
 @layer components {
   details.toc[open] summary ~ * {
     animation: slideUp 0.25s ease-in-out;
@@ -51,5 +57,15 @@
 
   a:empty {
     display: none;
+  }
+
+  .highlight-border-top {
+    border-color: var(--border-highlight-color);
+    border-top-width: var(--border-base-width);
+  }
+
+  .highlight-border-bottom {
+    border-color: var(--cv-highlight-color);
+    border-bottom-width: var(--border-base-width);
   }
 }
