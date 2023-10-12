@@ -15,6 +15,26 @@
     --border-base-width: 2px;
 }
 
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Thumb */
+  ::-webkit-scrollbar-thumb {
+    background: #4b5563; /* Color of the scrollbar thumb */
+    border-radius: 5px; /* Rounded corners for the thumb */
+  }
+  
+  /* Track background */
+  ::-webkit-scrollbar-track {
+    background: #111827; /* Color of the track */
+  }
+  
+  /* Corner */
+  ::-webkit-scrollbar-corner {
+    background: #111827; /* Color of the scrollbar corners */
+  }
+
 @layer components {
   details.toc[open] summary ~ * {
     animation: slideUp 0.25s ease-in-out;
