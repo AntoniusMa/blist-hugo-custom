@@ -85,7 +85,7 @@
   }
 
   .highlight-border-bottom {
-    border-color: var(--cv-highlight-color);
+    border-color: var(--border-highlight-color);
     border-bottom-width: var(--border-base-width);
   }
 }
